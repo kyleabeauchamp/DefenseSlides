@@ -1,0 +1,14 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{amssymb,amsfonts,amsmath}
+
+
+\begin{document}
+
+
+$$U \rightleftharpoons N$$
+
+
+\end{document}
