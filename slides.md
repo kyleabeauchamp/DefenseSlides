@@ -87,12 +87,18 @@ title: Molecular Dynamics
 <center>
 <img height=430 src=figures/hp35_box.png />
 </center>
+
 ---
+title: 100 $\mu s$ of HP35 Dynamics
 <center>
-<video width="800" height="600" controls>
+<video width="640" height="480" controls>
   <source src="movies/hp35_shaw.ogv" type="video/ogg">
 </video>
 </center> 
+
+<footer class="source"> 
+Shaw, 2011
+</footer>
 
 ---
 title: Goals of Atomistic Simulation
@@ -144,7 +150,7 @@ title: Markov State Models
 
 - Run parallel simulations on commodity hardware
 - Build kinetic model of dynamics
-- Quantitive prediction of structure, equilibrium, and kinetics
+- Quantitive model of structure, equilibrium, and kinetics
 
 <img height=250 src=figures/hp35_box.png /> <img height=250 src=figures/NTL9_network.jpg />   <img height=250 src=figures/HP35_relaxation.png />
 
@@ -154,6 +160,20 @@ Voelz, Bowman, Beauchamp, Pande, 2010.  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs
 Beauchamp, Bowman, Lane, Maibaum, Haque, Pande 2011. <br>
 Beauchamp, McGibbon, Lin, Pande, 2012. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Also: Chodera, Huang, Noe, Hummer, Dill, and others.
+</footer>
+
+---
+title: 100 $\mu s$ of HP35 Dynamics (MSM)
+
+<center>
+<video width="640" height="480" controls>
+  <source src="movies/hp35_msm.ogv" type="video/ogg">
+</video>
+</center> 
+
+<footer class="source"> 
+<br>
+Beauchamp, K. A., Ensign, D. L., Das, R., & Pande, V. S.  PNAS 2011.
 </footer>
 
 ---
@@ -278,7 +298,7 @@ title: Triplet Triplet Energy Transfer
 
 - Like FRET, but sensitive at the Angstrom level 
 - Used to monitor rates of contact formation
-- Vary denaturant conditions to probe native and unfolded states
+- With denaturant, can probe native and unfolded states
 
 ---
 title: Triplet Triplet Energy Transfer
@@ -317,12 +337,51 @@ Kiefhaber, 2010.
 
 ---
 title: Simulating TTET in Silico
+subtitle: A modified MSM can predict the output of TTET experiments
+
+<center>
+<img height=430 src=figures/ConformationalMSM.png />  <img height=450 src=figures/ElectronicMSM-full.png />
+</center>
+
 
 ---
-title: Predicting ALL TTET Experiments
+title: Measured TTET
+subtitle: Kiefhaber measured four pairs of TTET probe locations
 
+<center>
+<img height=430 src=figures/AllTraces-Expt.png />
+</center>
+
+---
+title: Comparing Simulation and Experiment
+
+<center>
+<img height=250 src=figures/AllTraces-Expt.png /> 
+
+<img height=250 src=figures/AllTraces-MSM.png />
+
+</center>
+
+
+---
+title: Predicting All TTET Experiments
+subtitle: Robust to forcefield
+
+<center>
+
+<img height=420 src=figures/AllTTET-10424.png />  <img height=420 src=figures/AllTTET-3036.png />
+
+</center>
+
+<footer class="source">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ff99sb-ildn
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ff03
+</footer>
 ---
 title: Inferring Conformational Ensembles from Noisy Experiments
+class: segue dark nobackground
 
 ---
 title: Acknowledgements
