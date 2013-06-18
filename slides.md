@@ -90,6 +90,7 @@ title: Molecular Dynamics
 
 ---
 title: 100 $\mu s$ of HP35 Dynamics
+
 <center>
 <video width="640" height="480" controls>
   <source src="movies/hp35_shaw.ogv" type="video/ogg">
@@ -340,32 +341,82 @@ title: Simulating TTET in Silico
 subtitle: A modified MSM can predict the output of TTET experiments
 
 <center>
-<img height=430 src=figures/ConformationalMSM.png />  <img height=450 src=figures/ElectronicMSM-full.png />
+<img height=430 src=figures/ConformationalMSM.png /> <img height=450 src=figures/ElectronicMSM-full.png />
 </center>
 
-
 ---
-title: Measured TTET
-subtitle: Kiefhaber measured four pairs of TTET probe locations
+title: Observed TTET at 4 probe locations
 
 <center>
 <img height=430 src=figures/AllTraces-Expt.png />
 </center>
 
 ---
-title: Comparing Simulation and Experiment
+title: MSM Prediction of TTET
 
 <center>
-<img height=250 src=figures/AllTraces-Expt.png /> 
-
-<img height=250 src=figures/AllTraces-MSM.png />
+<img height=430 src=figures/AllTraces-MSM.png />
 
 </center>
 
+---
+title: TTET at positions (7,23)
+
+<center>
+<img height=400 src=figures/Structure2-7-23.png />
+</center>
+
+---
+title: TTET at positions (7, 23)
+
+<center>
+<img height=500 src=figures/Data-7-23.png />
+</center>
+
+---
+title: TTET at positions (1, 23)
+
+<center>
+<img height=400 src=figures/Structure2-1-23.png />
+</center>
+
+---
+title: TTET at positions (1, 23)
+
+<center>
+<img height=500 src=figures/Data-1-23.png />
+</center>
+
+---
+title: TTET at positions (23, 35)
+
+<center>
+<img height=400 src=figures/Structure2-23-35.png />
+</center>
+
+---
+title: TTET at positions (23, 35)
+
+<center>
+<img height=500 src=figures/Data-23-35.png />
+</center>
+
+---
+title: TTET at positions (1, 35)
+
+<center>
+<img height=400 src=figures/Structure2-1-35.png />
+</center>
+
+---
+title: TTET at positions (1, 35)
+
+<center>
+<img height=500 src=figures/Data-1-35.png />
+</center>
 
 ---
 title: Predicting All TTET Experiments
-subtitle: Robust to forcefield
 
 <center>
 
@@ -380,16 +431,264 @@ ff99sb-ildn
 ff03
 </footer>
 ---
-title: Inferring Conformational Ensembles from Noisy Experiments
+title: Inferring Conformational Ensembles from Noisy Experiments (and simulation)
 class: segue dark nobackground
 
 ---
-title: Acknowledgements
-subtitle: Rhiju and Vijay
+title: What if the Force Fields are Broken?
+
+<img height=500 src=figures/elephant.jpg />
+
+<footer class="source">
+http://newh2o.com/2012/11/02/gemstones-elephant-in-the-room-free-project/
+</footer>
+
+---
+title: Experiments as Projections
+
+<center>
+<img height=525 src=figures/David_Covered.png />
+</center>
+
+---
+title: Experiments as Projections
+
+<center>
+<img height=525 src=figures/David_statue.png />
+</center>
+
+---
+title: Experiments as Projections
+
+<center>
+<img height=525 src=figures/David.png />
+</center>
+
+---
+title: Three Models, Same "Data"
+
+<center>
+<img height=500 src=figures/david_michelangelo.png /> <img height=500 src=figures/david_metal.png /> <img height=500 src=figures/david_both.png />
+</center>
+
+---
+title: Ambiguous Measurements
+
+<center>
+<img height=500 src=figures/single_karplus.png />
+</center>
+
+---
+title: Ambiguous Measurements
+
+<center>
+<img height=500 src=figures/multiple_karplus.png />
+</center>
+
+---
+title: Bayesian Energy Landscape Tilting
+
+- Infer ensembles from simulation <b>and</b> experiment
+- Error bars on equilibrium <b>and</b> structural features
+
+---
+title: Ingredients for Ensemble Inference
+
+- Equilibrium molecular dynamics simulation, with conformations $x_j$
+- Equilibrium experimental measurements $F_i$ with uncertainties $\sigma_i$
+- Predicted experimental observables: $f_i(x)$
+
+---
+title: Biasing and Reweighting
+
+- Project onto basis of experimental observables
+- Reweight populations by a linear free energy: $\pi_j(\alpha) \propto \exp[-\sum_i \alpha_i f_i(x)]$
+- $\alpha_i$ tells how populations are perturbed by $i$th experiment
+
+
+<center>
+<img height=300 src=figures/hist_0.png />
+</center>
+---
+title: Biasing and Reweighting
+
+- Project onto basis of experimental observables
+- Reweight populations by a linear free energy: $\pi_j(\alpha) \propto \exp[-\sum_i \alpha_i f_i(x)]$
+- $\alpha_i$ tells how populations are perturbed by $i$th experiment
+
+
+<center>
+<img height=300 src=figures/hist_2.png />
+</center>
+---
+title: Biasing and Reweighting
+
+- Project onto basis of experimental observables
+- Reweight populations by a linear free energy: $\pi_j(\alpha) \propto \exp[-\sum_i \alpha_i f_i(x)]$
+- $\alpha_i$ tells how populations are perturbed by $i$th experiment
+
+
+<center>
+<img height=300 src=figures/hist_-2.png />
+</center>
+
+---
+title: A likelihood framework
+
+<center>
+
+Assume independent normal errors:  
+
+$P(F_i | \alpha) \approx N(\langle f_i(x)\rangle _\alpha, \sigma_i)$
+
+Determine $\alpha$ by sampling the likelihood:
+
+$\log P(\alpha| F_1, ..., F_n) = -\sum_j \frac{1}{2}\frac{(\langle f_j(x)\rangle _\alpha - F_j)^2}{\sigma_i^2} + \log P(\alpha)$
+
+MaxEnt prior: $\log P(\alpha) = \lambda \sum_i \pi_i(\alpha) \log \pi_i(\alpha)$
+
+</center>
+
+
+---
+title: FitEnsemble
+
+<article>
+<iframe data-src="http://nbviewer.ipython.org/urls/raw.github.com/kyleabeauchamp/FitEnsemble/master/tutorial/Tutorial1.ipynb"></iframe>
+</article>
+
+
+---
+title: Tri-alanine
+
+- Model for secondary structure / intrinsic disorder
+- NMR Data: chemical shifts and scalar couplings
+
+<center>
+<img height=500 src=figures/ALA3.png />
+</center>
+
+
+<footer class="source"> Schwalbe, 2007  </footer>
+
+---
+title: Idea: Use chemical shifts and scalar couplings to reweight trialanine simulation.
+class: segue dark nobackground
+
+---
+title: BELT Corrects Force Field Error
+
+<center>
+<img height=500 src=figures/ALA3_chi2.png />
+</center>
+
+
+---
+title: Correcting $\beta$ Bias in Amber96
+
+<center>
+<img height=500 src=figures/ALA3_rama_amber96_raw.png />
+</center>
+
+---
+title: Correcting $\beta$ Bias in Amber96
+
+<center>
+<img height=500 src=figures/ALA3_rama_amber96_belt.png />
+</center>
+
+---
+title: Forcefield Independent Simulations
+
+<center>
+<img height=500 src=figures/state_0_by_forcefield.png />
+</center>
+
+---
+title: Bovine Pancreatic Trypsin Inhibitor
+
+- Workhorse in protein folding, crystallography, and NMR
+
+<center>
+<img height=500 src=figures/bpti_native.png />
+</center>
+
+<footer class="source"> 
+Hope et al. Acta. Cryst., 1996. 
+</footer> 
+
+---
+title: Bovine Pancreatic Trypsin Inhibitor
+
+- Multiple disulfide (C14-C38) conformations in trypsin binding loop.
+
+<center>
+<img height=400 src=figures/C14_C38.png />
+</center>
+
+<footer class="source"> 
+Palmer et al. JACS, 2003.
+</footer> 
+
+---
+title: Are BPTI Simulations Consistent with Experiment?
+
+<center>
+<img height=450 src=figures/BPTI_RMSD_Shaw.png />
+</center>
+
+---
+title: Idea: Use chemical shifts to reweight BPTI simulation.
+class: segue dark nobackground
+
+
+---
+title: Simulation Favors Non-Native State
+
+<center>
+<img height=500 src=figures/bpti_chi14_raw.png />
+</center>
+
+
+
+---
+title: BELT model Favors Native State
+
+<center>
+<img height=500 src=figures/bpti_chi14_belt.png />
+</center>
+
+---
+title: Falsifying Loop Models in BPTI
+
+<center>
+<img height=400 src=figures/bpti_raw.png />  <img height=400 src=figures/bpti_lvbp.png />
+</center>
+
+---
+title: BELT Conclusion
+
+- Bayesian ensemble modeling combines simulation and experiment
+- Overcome forcefield bias
+- Uncertainty Analysis on structure and equilibrium
+- Structural (Ensemble) Biology?
+
+
+---
+title: Conclusion
+
+- MSMs parallelize MD simulation, enabling millisecond-scale dynamics
+- MSMs allow both quantitative prediction and intuitive modeling
+- BELT enables experiment-driven modeling of structure and equilibrium
 
 ---
 title: Acknowledgements
-subtitle: Das and Pande Labs
+
+Rhiju and Vijay
+
+---
+title: Acknowledgements
+subtitle: Das Lab
 
 - Pablo Cordero
 - Fang-Chieh Chou
@@ -397,22 +696,50 @@ subtitle: Das and Pande Labs
 
 ---
 title: Acknowledgements
-subtitle: MSMBuilder
+subtitle: Pande Lab / MSMBuilder
 
-- Greg Bowman
-- Robert McGibbon
-- Christian Schwantes
-- TJ Lane
-- Imran Haque
-- Sergio Bacallado
-- Lutz Maibaum
-- Lee-Ping Wang
+<font size="3">
+
+ Greg Bowman
+
+ Robert McGibbon
+
+ Christian Schwantes
+
+ TJ Lane
+
+ Imran Haque
+
+ Sergio Bacallado
+
+ Lutz Maibaum
+
+ Lee-Ping Wang
+
+ Yu-Shan Lin
+
+ Vince Voelz
+
+ Dan Ensign
+ 
+</font>
 
 ---
 title: Acknowledgements
-subtitle: TTET
-Buzz Baldwin, Thomas Kiefhaber, Dan Herschlag
+subtitle: Biochemistry, External
+
+Buzz Baldwin, Thomas Kiefhaber, Dan Herschlag, Pehr Harbury
+
+Folding@Home Donors and Forum Volunteers (Bruce Borden)
+
+OpenMM Team: Joy Ku, Peter Eastman, Mark Friedrichs, Yutong Zhao
+
+BELT: John Chodera, Frank Cochran, TJ Lane
+
+Dissertation Committee: Pehr Harbury, Todd Martinez, Russ Altman
 
 
-LVBP: John Chodera, Frank Cochran, TJ Lane
+---
+title: Personal Acknowledgements
+
 
