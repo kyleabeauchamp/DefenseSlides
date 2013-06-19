@@ -16,7 +16,7 @@ title: Biological Macromolecules
 <footer class="source"> Dickerson, 1988; Pardi, 1996; Raleigh, 2007  </footer>
 
 ---
-title: Atomic Perturbations and Disease
+title: The Atomistic Basis of Disease
 
 ...EVKMD<b><font color="black">A</font></b>EFRHDS...  ...EVKMD<b><font color="black">T</font></b>EFRHDS...  ...EVKMD<b><font color="black">V</font></b>EFRHDS...
 
@@ -24,52 +24,59 @@ title: Atomic Perturbations and Disease
 
 <img width=300 src=figures/sick.png />  <img width=300 src=figures/healthy.png />   <img width=300 src=figures/sicker.png />
 
-<footer class="source"> Jonsson, 2012  </footer>
+<footer class="source"> 
+Jonsson, 2012  A673 T673 V673
+</footer>
 
 ---
-title: Molecular Medicine
+title: Atomistic Medicine
 
 <img width=475 src=figures/tiotropium.png /> <img width=425 src=figures/4daj.png />
 
 <footer class="source"> Wikipedia; Kobilka, 2012  </footer>
 
 ---
-title: Protein Folding
+title: Baby Steps: Protein Folding
 
-<img width=475 src=figures/tiotropium.png /> <img width=425 src=figures/4daj.png />
+<img width=425 src=figures/4daj.png />  <img width=425 src=figures/hp35.png />
 
 <footer class="source"> Wikipedia; Kobilka, 2012  </footer>
 
 ---
-title: Goal: Predictive, atomic-detail models of protein structure and dynamics (and folding!)
+title: Goal: Predictive, atomic-detail models of protein structure and dynamics (and folding)
 class: segue dark nobackground
 
 ---
-title: What do we know about macromolecules?
+title: What do we <i>really</i> know about proteins?
 
-<img heigh=200 src=figures/crystal.jpg />  <img height=200 src=figures/HP35_CD.png />  <img height=200 src=figures/HP35_relaxation.png /> 
+<img height=225 src=figures/crystal.jpg />  <img height=225 src=figures/HP35_CD.png />  <img height=225 src=figures/HP35_relaxation.png /> 
 
 ---
-title: What do macromolecules look like?
+title: What do proteins look like?
 
 Structural biology provides atomic-scale models of <i>selected</i> conformational states.
 <center>
-<img width=500 src=figures/crystal.jpg /> 
+<img height=300 src=figures/crystal.jpg />   <img height=300 src=figures/hp35.png/> 
 </center>
 
 <footer class="source"> http://cbic.yale.edu/crystallization-automation </footer>
 
 ---
-title: How do macromolecules work?
+title: How do proteins work?
 subtitle: Biophysical experiments characterize equilibrium and kinetic properties along <i>selected</i> order parameters.
 
 <img height=300 src=figures/HP35_CD.png />  <img height=300 src=figures/HP35_relaxation.png /> 
 
 ---
-title: Limitations of current measurements
+title: Limitations of current understanding
+
+Structure:
 
 - One protein (condition), one structure
 - Unnatural or perturbative sample conditions
+
+Equilibrium / Kinetics:
+
 - Limited structural and temporal resolution 
 - Interpreting / integrating data from multiple experiments
 
@@ -109,17 +116,6 @@ title: Goals of Atomistic Simulation
 - Generate atomic-detail hypotheses
 
 ---
-title: Challenges in Molecular Simulation
-
-- Sampling biologically-relevant timescales
-- Meaningful connection to experiment
-- Limited forcefield accuracy
-
-<center>
-<img height=350 src=figures/protein_timescales.jpg />
-</center>
-
----
 title: Outline
 
 - Inferring Protein Dynamics from Molecular Simulation
@@ -134,6 +130,19 @@ class: segue dark nobackground
 title: Two Challenges in Molecular Simulation
 subtitle: How to sample biological timescales?
 
+<center>
+<img height=450 src=figures/protein_timescales.jpg />
+</center>
+
+<footer class="source">
+Church, 2011.
+</footer>
+
+---
+
+title: Two Challenges in Molecular Simulation
+subtitle: How to sample biological timescales?
+
 <img height=300 src=figures/anton.jpg />  <img height=300 src=figures/TitanNew.jpg />
 
 <footer class="source"> 
@@ -141,17 +150,18 @@ Shaw et al.  , Eastman et. al.,  NVIDIA / Anandtech.
 </footer>
 
 ---
+
 title: Two Challenges in Molecular Simulation
-subtitle: Connecting to experiment
+subtitle: Meaningful Connection to experiment
 
 <img height=300 src=figures/hp35_box.png />   <img height=300 src=figures/HP35_relaxation.png />   <img height=300 src=figures/folding_reaction.png />
 
 ---
 title: Markov State Models
 
-- Run parallel simulations on commodity hardware
-- Build kinetic model of dynamics
-- Quantitive model of structure, equilibrium, and kinetics
+- Run many parallel simulations on commodity hardware
+- Build kinetic network model of dynamics
+- Quantitively predict structure, equilibrium, and kinetics
 
 <img height=250 src=figures/hp35_box.png /> <img height=250 src=figures/NTL9_network.jpg />   <img height=250 src=figures/HP35_relaxation.png />
 
@@ -203,11 +213,24 @@ title: Introduction to Markov State Models
 title: Counting Transitions
 
 <center>
-$A = (1112222)$
+
+<img height=300 src=figures/NewPaths-2State.png />
 
 $\downarrow$
 
-$C = \begin{pmatrix}2 & 1 \\\ 0 & 3\end{pmatrix}$
+$A = (111222222)$
+
+---
+title: Counting Transitions
+
+<center>
+
+$A = (111222222)$
+
+
+$\downarrow$
+
+$C = \begin{pmatrix} C_{1\rightarrow 1} & C_{1\rightarrow 2} \\\ C_{2 \rightarrow 1} & C_{2 \rightarrow 2} \end{pmatrix} =  \begin{pmatrix}2 & 1 \\\ 0 & 5\end{pmatrix}$
 
 </center>
 
@@ -215,11 +238,11 @@ $C = \begin{pmatrix}2 & 1 \\\ 0 & 3\end{pmatrix}$
 title: Estimating Rates
 
 <center>
-$C = \begin{pmatrix}2 & 1 \\\ 0 & 3\end{pmatrix}$
+$C = \begin{pmatrix} C_{1\rightarrow 1} & C_{1\rightarrow 2} \\\ C_{2 \rightarrow 1} & C_{2 \rightarrow 2} \end{pmatrix} = \begin{pmatrix}2 & 1 \\\ 0 & 5\end{pmatrix}$
 
 $\downarrow$
 
-$T = \begin{pmatrix}\frac{2}{3} & \frac{1}{3} \\\ 0 & 1\end{pmatrix}$
+$T = \begin{pmatrix} T_{1\rightarrow 1} & T_{1\rightarrow 2} \\\ T_{2 \rightarrow 1} & T_{2 \rightarrow 2} \end{pmatrix} = \begin{pmatrix}\frac{2}{3} & \frac{1}{3} \\\ 0 & 1\end{pmatrix}$
 
 </center>
 
@@ -297,7 +320,7 @@ title: HP35: A Model for Protein Folding
 ---
 title: Triplet Triplet Energy Transfer
 
-- Like FRET, but sensitive at the Angstrom level 
+- Like FRET, but sensitive at the Å level 
 - Used to monitor rates of contact formation
 - With denaturant, can probe native and unfolded states
 
@@ -317,6 +340,18 @@ title: Triplet Triplet Energy Transfer
 
 <center>
 <img height=500 src=figures/Structure-1-35.png />
+</center>
+
+
+<footer class="source">
+Kiefhaber, 2010.
+</footer>
+
+---
+title: Triplet Triplet Energy Transfer
+
+<center>
+<img height=500 src=figures/Structure-1-35-star.png />
 </center>
 
 
@@ -349,14 +384,6 @@ title: Observed TTET at 4 probe locations
 
 <center>
 <img height=430 src=figures/AllTraces-Expt.png />
-</center>
-
----
-title: MSM Prediction of TTET
-
-<center>
-<img height=430 src=figures/AllTraces-MSM.png />
-
 </center>
 
 ---
@@ -431,17 +458,36 @@ ff99sb-ildn
 ff03
 </footer>
 ---
+title: TTET Conclusions
+
+- Experimental advances revealed multi-state kinetics in smallest protein system
+- MSMs capture multi-state kinetics and recapitulate TTET measurements
+- Further work will require improved force fields and better models for experimental observables (TTET)
+
+
+---
 title: Inferring Conformational Ensembles from Noisy Experiments (and simulation)
 class: segue dark nobackground
 
 ---
-title: What if the Force Fields are Broken?
+title: What if the force fields are broken?
 
 <img height=500 src=figures/elephant.jpg />
 
 <footer class="source">
 http://newh2o.com/2012/11/02/gemstones-elephant-in-the-room-free-project/
 </footer>
+
+---
+title: Conformational ensembles
+
+- Structure + Equilibrium (not kinetics)
+- Characterize the population of <b>every</b> conformation
+- <b>Rigorous</b> connection to equilibrium measurements
+
+<center>
+<img height=250 src=figures/hist_0.png />  <img height=250 src=figures/ALA3_rama_amber96_raw.png />  <img height=250 src=figures/bpti_raw.png />
+</center>
 
 ---
 title: Experiments as Projections
@@ -464,12 +510,23 @@ title: Experiments as Projections
 <img height=525 src=figures/David.png />
 </center>
 
+<footer class="source">
+Regarded from two sides.  Diet Wiegman, 1984.
+</footer>
 ---
-title: Three Models, Same "Data"
+title: Two Models, Same "Data"
 
 <center>
-<img height=500 src=figures/david_michelangelo.png /> <img height=500 src=figures/david_metal.png /> <img height=500 src=figures/david_both.png />
+<img height=500 src=figures/david_michelangelo.png /> <img height=500 src=figures/david_metal.png /> 
 </center>
+
+---
+title: A Third Possibility
+
+<center>
+<img height=500 src=figures/david_michelangelo.png />  <img height=500 src=figures/harpoon.png />  <img height=500 src=figures/david_metal.png /> 
+</center>
+
 
 ---
 title: Ambiguous Measurements
@@ -479,16 +536,10 @@ title: Ambiguous Measurements
 </center>
 
 ---
-title: Ambiguous Measurements
-
-<center>
-<img height=500 src=figures/multiple_karplus.png />
-</center>
-
----
 title: Bayesian Energy Landscape Tilting
 
-- Infer ensembles from simulation <b>and</b> experiment
+- Infer conformational ensembles from simulation <b>and</b> experiment
+- Simulataneously model structure and population
 - Error bars on equilibrium <b>and</b> structural features
 
 ---
@@ -559,7 +610,7 @@ title: FitEnsemble
 
 
 ---
-title: Tri-alanine
+title: Trialanine
 
 - Model for secondary structure / intrinsic disorder
 - NMR Data: chemical shifts and scalar couplings
@@ -573,7 +624,6 @@ title: Tri-alanine
 
 ---
 title: Idea: Use chemical shifts and scalar couplings to reweight trialanine simulation.
-class: segue dark nobackground
 
 ---
 title: BELT Corrects Force Field Error
@@ -598,7 +648,7 @@ title: Correcting $\beta$ Bias in Amber96
 </center>
 
 ---
-title: Forcefield Independent Simulations
+title: Forcefield-Independent Simulations
 
 <center>
 <img height=500 src=figures/state_0_by_forcefield.png />
@@ -639,7 +689,6 @@ title: Are BPTI Simulations Consistent with Experiment?
 
 ---
 title: Idea: Use chemical shifts to reweight BPTI simulation.
-class: segue dark nobackground
 
 
 ---
@@ -659,20 +708,36 @@ title: BELT model Favors Native State
 </center>
 
 ---
-title: Falsifying Loop Models in BPTI
+title: Models for BPTI
 
 <center>
-<img height=400 src=figures/bpti_raw.png />  <img height=400 src=figures/bpti_lvbp.png />
+<img height=320 src=figures/bpti_xray.png />  <img height=320 src=figures/bpti_raw.png />  <img height=320 src=figures/bpti_belt.png />
 </center>
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; X-Ray &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MD &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  BELT
+
 ---
-title: BELT Conclusion
+title: Falsifying BPTI Models with J Couplings
 
-- Bayesian ensemble modeling combines simulation and experiment
+<center>
+<img height=320 src=figures/bpti_xray_crossthrough.png />  <img height=320 src=figures/bpti_raw_crossthrough.png />  <img height=320 src=figures/bpti_belt.png />
+</center>
+
+&nbsp;&nbsp;&nbsp;&nbsp; $\frac{1}{n}\chi^2 = 15.0$  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $\frac{1}{n}\chi^2 = 13.7$  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\frac{1}{n}\chi^2 = 10.4$
+
+---
+title: Future Work
+
+- Measure <b>all</b> scalar couplings for BPTI
+- Better predictors of experimental observables: chemical shifts, scalar couplings
+- Start with better simulations
+
+---
+title: Structural (Ensemble?) Biology
+
+- Model combines simulation and experiment
+- Error bars on structures
 - Overcome forcefield bias
-- Uncertainty Analysis on structure and equilibrium
-- Structural (Ensemble) Biology?
-
 
 ---
 title: Conclusion
@@ -691,6 +756,7 @@ title: Acknowledgements
 subtitle: Das Lab
 
 - Pablo Cordero
+- Frank Cochran
 - Fang-Chieh Chou
 - Parin Sripakdeevong
 
