@@ -714,14 +714,14 @@ title: Falsifying BPTI Models with J Couplings
 title: Future Work
 
 - Measure <b>all</b> scalar couplings for BPTI
-- Better predictors of experimental observables: chemical shifts, scalar couplings
+- Better predictors of experimental observables: chemical shifts, scalar couplings, (TTET)
 - Start with better simulations
 
 ---
 title: Conclusion
 
 - MSMs parallelize MD simulation, bringing millisecond-scale dynamics within reach
-- MSMs allow both quantitative prediction and intuitive modeling
+- Coupling MSMs to phenomenological model of TTET allows quantitative prediction of kinetic experiments
 - BELT enables experiment-driven modeling of structure and equilibrium
 
 ---
@@ -737,6 +737,8 @@ subtitle: Das Lab
 - Frank Cochran
 - Fang-Chieh Chou
 - Parin Sripakdeevong
+- Ann Kladwang
+- Everyone!
 
 ---
 title: Acknowledgements
@@ -766,24 +768,52 @@ subtitle: Pande Lab / MSMBuilder
 
  Dan Ensign
  
+ Everyone!
+ 
 </font>
 
 ---
 title: Acknowledgements
-subtitle: Biochemistry, External
+subtitle: Biochemistry 
 
-Buzz Baldwin, Thomas Kiefhaber, Dan Herschlag, Pehr Harbury
+Buzz Baldwin
+
+Dan Herschlag
+
+Pehr Harbury
+
+Xuesong Shi
+
+Administrative Staff
+
+Everyone!
+
+---
+title: Acknowledgements
+subtitle: Committee 
+
+Todd Martinez
+
+Russ Altman
+
+---
+title: Acknowledgements
+subtitle: Folding@Home, Simbios, External
 
 Folding@Home Donors and Forum Volunteers (Bruce Borden)
 
 OpenMM Team: Joy Ku, Peter Eastman, Mark Friedrichs, Yutong Zhao
 
+TTET: Thomas Kiefhaber
+
 BELT: John Chodera, Frank Cochran, TJ Lane
 
-Dissertation Committee: Pehr Harbury, Todd Martinez, Russ Altman
+DE Shaw Research
 
+Susan Marqusee, Laura Rosen
 
 ---
 title: Personal Acknowledgements
+
 
 
