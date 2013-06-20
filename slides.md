@@ -68,7 +68,7 @@ subtitle: Biophysical experiments characterize equilibrium and kinetic propertie
 <img height=300 src=figures/HP35_CD.png />  <img height=300 src=figures/HP35_relaxation.png /> 
 
 ---
-title: Limitations of current understanding
+title: Limitations of atomic understanding
 
 Structure:
 
@@ -78,7 +78,8 @@ Structure:
 Equilibrium / Kinetics:
 
 - Limited structural and temporal resolution 
-- Interpreting / integrating data from multiple experiments
+- Interpreting data at atomic scale
+- Integrating data from multiple experiments
 
 
 ---
@@ -112,8 +113,8 @@ Shaw, 2011
 title: Goals of Atomistic Simulation
 
 - Calculate experimental observables
-- Interpret experimental observables
 - Generate atomic-detail hypotheses
+- Interpret experimental observables
 
 ---
 title: Outline
@@ -320,9 +321,8 @@ title: HP35: A Model for Protein Folding
 ---
 title: Triplet Triplet Energy Transfer
 
-- Like FRET, but sensitive at the Å level 
+- Like FRET, but sensitive at the Å scale 
 - Used to monitor rates of contact formation
-- With denaturant, can probe native and unfolded states
 
 ---
 title: Triplet Triplet Energy Transfer
@@ -536,10 +536,12 @@ title: Ambiguous Measurements
 </center>
 
 ---
-title: Bayesian Energy Landscape Tilting
+title: Bayesian Energy Landscape Tilting 
 
 - Infer conformational ensembles from simulation <b>and</b> experiment
 - Simulataneously model structure and population
+- Characterize posterior through MCMC
+- Consistent with ambiguous data
 - Error bars on equilibrium <b>and</b> structural features
 
 ---
@@ -623,7 +625,7 @@ title: Trialanine
 <footer class="source"> Schwalbe, 2007  </footer>
 
 ---
-title: Idea: Use chemical shifts and scalar couplings to reweight trialanine simulation.
+title: Idea: Use chemical shifts and scalar couplings to reweight simulations of trialanine performed in five different force fields.
 
 ---
 title: BELT Corrects Force Field Error
@@ -687,6 +689,7 @@ title: Are BPTI Simulations Consistent with Experiment?
 <img height=450 src=figures/BPTI_RMSD_Shaw.png />
 </center>
 
+<footer class="source"> Shaw, 2010  </footer>
 ---
 title: Idea: Use chemical shifts to reweight BPTI simulation.
 
@@ -698,7 +701,7 @@ title: Simulation Favors Non-Native State
 <img height=500 src=figures/bpti_chi14_raw.png />
 </center>
 
-
+<footer class="source"> Crystal Structure shown as X  </footer>
 
 ---
 title: BELT model Favors Native State
@@ -707,6 +710,8 @@ title: BELT model Favors Native State
 <img height=500 src=figures/bpti_chi14_belt.png />
 </center>
 
+
+<footer class="source"> Crystal Structure shown as X  </footer>
 ---
 title: Models for BPTI
 
@@ -733,16 +738,9 @@ title: Future Work
 - Start with better simulations
 
 ---
-title: Structural (Ensemble?) Biology
-
-- Model combines simulation and experiment
-- Error bars on structures
-- Overcome forcefield bias
-
----
 title: Conclusion
 
-- MSMs parallelize MD simulation, enabling millisecond-scale dynamics
+- MSMs parallelize MD simulation, bringing millisecond-scale dynamics within reach
 - MSMs allow both quantitative prediction and intuitive modeling
 - BELT enables experiment-driven modeling of structure and equilibrium
 
