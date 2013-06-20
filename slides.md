@@ -36,58 +36,26 @@ title: Atomistic Medicine
 <footer class="source"> Wikipedia; Kobilka, 2012  </footer>
 
 ---
-title: Baby Steps: Protein Folding
+title: Baby Steps: Protein Folding Dynamics
 
-<img width=425 src=figures/4daj.png />  <img width=425 src=figures/hp35.png />
+<center>
+<img width=400 src=figures/SequenceLogo.png />  
 
-<footer class="source"> Wikipedia; Kobilka, 2012  </footer>
+$\downarrow$
+
+<img width=350 src=figures/hp35.png />
+
+</center>
+
+<footer class="source"> Eaton, McKnight, Raleigh [...]  </footer>
 
 ---
 title: Goal: Predictive, atomic-detail models of protein structure and dynamics (and folding)
 class: segue dark nobackground
 
----
-title: What do we <i>really</i> know about proteins?
-
-<img height=225 src=figures/crystal.jpg />  <img height=225 src=figures/HP35_CD.png />  <img height=225 src=figures/HP35_relaxation.png /> 
 
 ---
-title: What do proteins look like?
-
-Structural biology provides atomic-scale models of <i>selected</i> conformational states.
-<center>
-<img height=300 src=figures/crystal.jpg />   <img height=300 src=figures/hp35.png/> 
-</center>
-
-<footer class="source"> http://cbic.yale.edu/crystallization-automation </footer>
-
----
-title: How do proteins work?
-subtitle: Biophysical experiments characterize equilibrium and kinetic properties along <i>selected</i> order parameters.
-
-<img height=300 src=figures/HP35_CD.png />  <img height=300 src=figures/HP35_relaxation.png /> 
-
----
-title: Limitations of atomic understanding
-
-Structure:
-
-- One protein (condition), one structure
-- Unnatural or perturbative sample conditions
-
-Equilibrium / Kinetics:
-
-- Limited structural and temporal resolution 
-- Interpreting data at atomic scale
-- Integrating data from multiple experiments
-
-
----
-title: Introduction to Atomistic Simulation
-class: segue dark nobackground
-
----
-title: Molecular Dynamics
+title: Introduction to Molecular Dynamics
 
 - Simulate the physical interactions of proteins in solution
 - Numerically integrate the equations of motion
@@ -372,19 +340,23 @@ Kiefhaber, 2010.
 </footer>
 
 ---
-title: Simulating TTET in Silico
-subtitle: A modified MSM can predict the output of TTET experiments
-
-<center>
-<img height=430 src=figures/ConformationalMSM.png /> <img height=450 src=figures/ElectronicMSM-full.png />
-</center>
-
----
 title: Observed TTET at 4 probe locations
 
 <center>
 <img height=430 src=figures/AllTraces-Expt.png />
 </center>
+
+---
+title: Simulating TTET in Silico
+subtitle: A modified MSM can predict the output of TTET experiments
+
+<center>
+<img height=400 src=figures/ConformationalMSM.png /> <img height=420 src=figures/ElectronicMSM-full.png />
+</center>
+
+<footer class="source"> 
+Beauchamp, K. A., Ensign, D. L., Das, R., & Pande, V. S.  PNAS 2011.
+</footer>
 
 ---
 title: TTET at positions (7,23)
@@ -456,6 +428,11 @@ title: Predicting All TTET Experiments
 ff99sb-ildn
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ff03
+
+<br>
+
+Beauchamp, K. A., Ensign, D. L., Das, R., & Pande, V. S.  PNAS 2011.
+
 </footer>
 ---
 title: TTET Conclusions
@@ -464,6 +441,9 @@ title: TTET Conclusions
 - MSMs capture multi-state kinetics and recapitulate TTET measurements
 - Further work will require improved force fields and better models for experimental observables (TTET)
 
+<footer class="source"> 
+Beauchamp, K. A., Ensign, D. L., Das, R., & Pande, V. S.  PNAS 2011.
+</footer>
 
 ---
 title: Inferring Conformational Ensembles from Noisy Experiments (and simulation)
