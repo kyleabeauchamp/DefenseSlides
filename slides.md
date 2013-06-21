@@ -461,7 +461,7 @@ title: TTET Conclusions
 
 - Experimental advances revealed multi-state kinetics in smallest protein system
 - MSMs capture multi-state kinetics and recapitulate TTET measurements
-- Further work will require improved force fields and better models for experimental observables (TTET)
+- Further work will require improved force fields and better models for experimental observables
 
 <footer class="source"> 
 Beauchamp, K. A., Ensign, D. L., Das, R., & Pande, V. S.  PNAS 2011.
