@@ -609,7 +609,9 @@ MaxEnt prior: $\log P(\alpha) = \lambda \sum_i \pi_i(\alpha) \log \pi_i(\alpha)$
 title: FitEnsemble
 subtitle: An Open-Source Python Library for Ensemble Modeling
 
-
+<article>
+<iframe data-src="http://nbviewer.ipython.org/urls/raw.github.com/kyleabeauchamp/FitEnsemble/master/tutorial/Tutorial1.ipynb"></iframe>
+</article>
 
 ---
 title: Trialanine
