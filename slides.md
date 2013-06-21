@@ -217,6 +217,7 @@ $T = \begin{pmatrix} T_{1\rightarrow 1} & T_{1\rightarrow 2} \\\ T_{2 \rightarro
 
 ---
 title: MSMBuilder
+subtitle: An Open-Source, High Performance, Python toolkit for MSM Construction
 
 <img height=400 src=figures/msmbuilder.png />  <img height=400 src=figures/msmb_users.png />
 
@@ -585,6 +586,7 @@ MaxEnt prior: $\log P(\alpha) = \lambda \sum_i \pi_i(\alpha) \log \pi_i(\alpha)$
 
 ---
 title: FitEnsemble
+subtitle: An Open-Source Python Library for Ensemble Modeling
 
 <article>
 <iframe data-src="http://nbviewer.ipython.org/urls/raw.github.com/kyleabeauchamp/FitEnsemble/master/tutorial/Tutorial1.ipynb"></iframe>
@@ -723,6 +725,7 @@ title: Conclusion
 - MSMs parallelize MD simulation, bringing millisecond-scale dynamics within reach
 - Coupling MSMs to phenomenological model of TTET allows quantitative prediction of kinetic experiments
 - BELT enables experiment-driven modeling of structure and equilibrium
+- Tools for protein inference (MSMBuilder, FitEnsemble)
 
 ---
 title: Acknowledgements
