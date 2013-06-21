@@ -47,7 +47,7 @@ $\downarrow$
 
 </center>
 
-<footer class="source"> Eaton, McKnight, Raleigh [...]  </footer>
+<footer class="source"> Kim, Eaton, McKnight, Raleigh, others  </footer>
 
 ---
 title: Goal: Predictive, atomic-detail models of protein structure and dynamics (and folding)
@@ -84,12 +84,25 @@ title: Goals of Atomistic Simulation
 - Generate atomic-detail hypotheses
 - Interpret experimental observables
 
+<center>
+<img height=325 src=figures/hp35_box.png />  <img height=325 src=figures/HP35_relaxation.png />
+</center>
+
+<footer class="source"> 
+Eaton, 2006
+</footer>
+
 ---
 title: Outline
 
 - Inferring Protein Dynamics from Molecular Simulation
 - Quantitative Comparison of villin headpiece simulations and Triple-Triplet Energy Transfer Experiments
 - Inferring Conformational Ensembles from Noisy Experiments
+
+<center>
+<img height=300 src=figures/NTL9_network.jpg />   <img height=300 src=figures/Structure2-7-23.png /> <img height=300 src=figures/ALA3_rama_amber96_belt.png />
+</center>
+
 
 ---
 title: Inferring Protein Dynamics from Molecular Simulation
@@ -125,6 +138,10 @@ subtitle: Meaningful Connection to experiment
 
 <img height=300 src=figures/hp35_box.png />   <img height=300 src=figures/HP35_relaxation.png />   <img height=300 src=figures/folding_reaction.png />
 
+<footer class="source"> 
+Eaton, 2006
+</footer>
+
 ---
 title: Markov State Models
 
@@ -139,7 +156,7 @@ Bowman, Beauchamp, Boxer, Pande, 2009. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
 Voelz, Bowman, Beauchamp, Pande, 2010.  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Beauchamp, Bowman, Lane, Maibaum, Haque, Pande 2011. <br>
 Beauchamp, McGibbon, Lin, Pande, 2012. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Also: Chodera, Huang, Noe, Hummer, Dill, and others.
+Also: Chodera, Huang, Noé, Hummer, Dill, and others.
 </footer>
 
 ---
@@ -195,7 +212,6 @@ title: Counting Transitions
 <center>
 
 $A = (111222222)$
-
 
 $\downarrow$
 
@@ -286,6 +302,7 @@ title: HP35: A Model for Protein Folding
 <img height=500 src=figures/hp35.png />
 </center>
 
+<footer class="source"> Kim, Eaton, McKnight, Raleigh, others  </footer>
 
 ---
 title: Triplet Triplet Energy Transfer
@@ -346,6 +363,10 @@ title: Observed TTET at 4 probe locations
 <center>
 <img height=430 src=figures/AllTraces-Expt.png />
 </center>
+
+<footer class="source">
+Kiefhaber, 2010.
+</footer>
 
 ---
 title: Simulating TTET in Silico
@@ -588,9 +609,6 @@ MaxEnt prior: $\log P(\alpha) = \lambda \sum_i \pi_i(\alpha) \log \pi_i(\alpha)$
 title: FitEnsemble
 subtitle: An Open-Source Python Library for Ensemble Modeling
 
-<article>
-<iframe data-src="http://nbviewer.ipython.org/urls/raw.github.com/kyleabeauchamp/FitEnsemble/master/tutorial/Tutorial1.ipynb"></iframe>
-</article>
 
 
 ---
