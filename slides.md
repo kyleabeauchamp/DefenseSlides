@@ -100,7 +100,7 @@ title: Outline
 - Inferring Conformational Ensembles from Noisy Experiments
 
 <center>
-<img height=300 src=figures/NTL9_network.jpg />   <img height=300 src=figures/Structure2-7-23.png /> <img height=300 src=figures/ALA3_rama_amber96_belt.png />
+<img height=220 src=figures/NTL9_network.jpg />   <img height=220 src=figures/Structure2-7-23.png /> <img height=220 src=figures/ALA3_rama_amber96_belt.png />
 </center>
 
 
