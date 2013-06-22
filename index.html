@@ -152,7 +152,7 @@ Jonsson, 2012  A673 T673 V673
     </hgroup>
     <article ><p><center>
 <video width="640" height="480" controls>
-  <source src="movies/hp35_shaw.ogv" type="video/ogg">
+  <source src="movies/hp35_shaw.mp4" type="video/mp4">
 </video>
 </center> </p>
 <footer class="source"> 
@@ -279,7 +279,7 @@ Also: Chodera, Huang, Noé, Hummer, Dill, and others.
     </hgroup>
     <article ><p><center>
 <video width="640" height="480" controls>
-  <source src="movies/hp35_msm.ogv" type="video/ogg">
+  <source src="movies/hp35_msm.mp4" type="video/mp4">
 </video>
 </center> </p>
 <footer class="source"> 
@@ -853,7 +853,7 @@ Regarded from two sides.  Diet Wiegman, 1984.
       <h3></h3>
     </hgroup>
     <article ><ul>
-<li>Project onto basis of experimental observables</li>
+<li>Project onto basis of predicted experimental observables</li>
 <li>Reweight populations by a linear free energy: $\pi_j(\alpha) \propto \exp[-\sum_i \alpha_i f_i(x)]$</li>
 <li>$\alpha_i$ tells how populations are perturbed by $i$th experiment</li>
 </ul>
@@ -907,8 +907,7 @@ Regarded from two sides.  Diet Wiegman, 1984.
 <p>Assume independent normal errors:  </p>
 <p>$P(F_i | \alpha) \approx N(\langle f_i(x)\rangle _\alpha, \sigma_i)$</p>
 <p>Determine $\alpha$ by sampling the likelihood:</p>
-<p>$\log P(\alpha| F_1, ..., F_n) = -\sum_j \frac{1}{2}\frac{(\langle f_j(x)\rangle _\alpha - F_j)^2}{\sigma_i^2} + \log P(\alpha)$</p>
-<p>MaxEnt prior: $\log P(\alpha) = \lambda \sum_i \pi_i(\alpha) \log \pi_i(\alpha)$</p>
+<p>$\log P(\alpha| F_1, ..., F_n) = -\sum_i \frac{1}{2}\frac{(\langle f_i(x)\rangle _\alpha - F_i)^2}{\sigma_i^2} + \log P(\alpha)$</p>
 <p></center></p></article>
  
 </slide>
@@ -1114,13 +1113,14 @@ Palmer et al. JACS, 2003.
 <slide  >
   
     <hgroup>
-      <h2>Future Work</h2>
+      <h2>Conclusions and Future Work (BELT)</h2>
       <h3></h3>
     </hgroup>
     <article ><ul>
+<li>BELT corrects forcefield bias in trialanine and BPTI</li>
+<li>Role of loop flexibility in BPTI-Trypsin binding</li>
 <li>Measure <b>all</b> scalar couplings for BPTI</li>
 <li>Better predictors of experimental observables: chemical shifts, scalar couplings, (TTET)</li>
-<li>Start with better simulations</li>
 </ul></article>
  
 </slide>
@@ -1135,7 +1135,7 @@ Palmer et al. JACS, 2003.
 <li>MSMs parallelize MD simulation, bringing millisecond-scale dynamics within reach</li>
 <li>Coupling MSMs to phenomenological model of TTET allows quantitative prediction of kinetic experiments</li>
 <li>BELT enables experiment-driven modeling of structure and equilibrium</li>
-<li>Tools for protein inference (MSMBuilder, FitEnsemble)</li>
+<li>Open-Source Tools for protein inference (MSMBuilder, FitEnsemble)</li>
 </ul></article>
  
 </slide>

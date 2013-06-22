@@ -69,7 +69,7 @@ title: 100 $\mu s$ of HP35 Dynamics
 
 <center>
 <video width="640" height="480" controls>
-  <source src="movies/hp35_shaw.ogv" type="video/ogg">
+  <source src="movies/hp35_shaw.mp4" type="video/mp4">
 </video>
 </center> 
 
@@ -164,7 +164,7 @@ title: 100 $\mu s$ of HP35 Dynamics (MSM)
 
 <center>
 <video width="640" height="480" controls>
-  <source src="movies/hp35_msm.ogv" type="video/ogg">
+  <source src="movies/hp35_msm.mp4" type="video/mp4">
 </video>
 </center> 
 
@@ -556,7 +556,7 @@ title: Ingredients for Ensemble Inference
 ---
 title: Biasing and Reweighting
 
-- Project onto basis of experimental observables
+- Project onto basis of predicted experimental observables
 - Reweight populations by a linear free energy: $\pi_j(\alpha) \propto \exp[-\sum_i \alpha_i f_i(x)]$
 - $\alpha_i$ tells how populations are perturbed by $i$th experiment
 
@@ -598,9 +598,7 @@ $P(F_i | \alpha) \approx N(\langle f_i(x)\rangle _\alpha, \sigma_i)$
 
 Determine $\alpha$ by sampling the likelihood:
 
-$\log P(\alpha| F_1, ..., F_n) = -\sum_j \frac{1}{2}\frac{(\langle f_j(x)\rangle _\alpha - F_j)^2}{\sigma_i^2} + \log P(\alpha)$
-
-MaxEnt prior: $\log P(\alpha) = \lambda \sum_i \pi_i(\alpha) \log \pi_i(\alpha)$
+$\log P(\alpha| F_1, ..., F_n) = -\sum_i \frac{1}{2}\frac{(\langle f_i(x)\rangle _\alpha - F_i)^2}{\sigma_i^2} + \log P(\alpha)$
 
 </center>
 
@@ -733,11 +731,12 @@ title: Falsifying BPTI Models with J Couplings
 &nbsp;&nbsp;&nbsp;&nbsp; $\frac{1}{n}\chi^2 = 15.0$  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $\frac{1}{n}\chi^2 = 13.7$  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\frac{1}{n}\chi^2 = 10.4$
 
 ---
-title: Future Work
+title: Conclusions and Future Work (BELT)
 
+- BELT corrects forcefield bias in trialanine and BPTI
+- Role of loop flexibility in BPTI-Trypsin binding
 - Measure <b>all</b> scalar couplings for BPTI
 - Better predictors of experimental observables: chemical shifts, scalar couplings, (TTET)
-- Start with better simulations
 
 ---
 title: Conclusion
@@ -745,7 +744,7 @@ title: Conclusion
 - MSMs parallelize MD simulation, bringing millisecond-scale dynamics within reach
 - Coupling MSMs to phenomenological model of TTET allows quantitative prediction of kinetic experiments
 - BELT enables experiment-driven modeling of structure and equilibrium
-- Tools for protein inference (MSMBuilder, FitEnsemble)
+- Open-Source Tools for protein inference (MSMBuilder, FitEnsemble)
 
 ---
 title: Acknowledgements
