@@ -617,9 +617,15 @@ title: Idea: Use chemical shifts and scalar couplings to reweight simulations of
 title: BELT Corrects Force Field Error
 
 <center>
-<img height=500 src=figures/ALA3_chi2.png />
+<img height=500 src=figures/ALA3_chi2_train.png />
 </center>
 
+---
+title: Robust to Over-Fitting
+
+<center>
+<img height=500 src=figures/ALA3_chi2_test.png />
+</center>
 
 ---
 title: Correcting $\beta$ Bias in Amber96
