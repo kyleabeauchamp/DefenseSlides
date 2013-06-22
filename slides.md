@@ -36,18 +36,16 @@ title: Atomistic Medicine
 <footer class="source"> Wikipedia; Kobilka, 2012  </footer>
 
 ---
-title: Baby Steps: Protein Folding Dynamics
+title: A crisis at the atomic scale
 
 <center>
-<img width=400 src=figures/SequenceLogo.png />  
-
-$\downarrow$
-
-<img width=350 src=figures/hp35.png />
-
+<img width=700 src=figures/length_scales_kyle.jpg />
 </center>
 
-<footer class="source"> Kim, Eaton, McKnight, Raleigh, others  </footer>
+<footer class="source"> 
+http://www.nature.com/scitable/topicpage/what-is-a-cell-14023083
+</footer>
+
 
 ---
 title: Goal: Predictive, atomic-detail models of protein structure and dynamics (and folding)
