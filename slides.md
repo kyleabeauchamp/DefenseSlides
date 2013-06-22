@@ -244,7 +244,7 @@ title: Progress in MSM Construction
 subtitle: Scaling to full protein systems
 
 <center>
-<img height=400 src=figures/JCP_cover.jpg/>
+<img height=400 src=figures/JCP_cover.png />
 </center>
 
 
@@ -314,18 +314,6 @@ title: Triplet Triplet Energy Transfer
 <center>
 <img height=500 src=figures/Structure-23-35.png />
 </center>
-
-<footer class="source">
-Kiefhaber, 2010.
-</footer>
-
----
-title: Triplet Triplet Energy Transfer
-
-<center>
-<img height=500 src=figures/Structure-1-35.png />
-</center>
-
 
 <footer class="source">
 Kiefhaber, 2010.
@@ -728,11 +716,13 @@ title: Falsifying BPTI Models with J Couplings
 
 &nbsp;&nbsp;&nbsp;&nbsp; $\frac{1}{n}\chi^2 = 15.0$  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $\frac{1}{n}\chi^2 = 13.7$  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\frac{1}{n}\chi^2 = 10.4$
 
+<footer class="source"> Balasubramanian, 1994
+</footer>
+
 ---
 title: Conclusions and Future Work (BELT)
 
 - BELT corrects forcefield bias in trialanine and BPTI
-- Role of loop flexibility in BPTI-Trypsin binding
 - Measure <b>all</b> scalar couplings for BPTI
 - Better predictors of experimental observables: chemical shifts, scalar couplings, (TTET)
 
