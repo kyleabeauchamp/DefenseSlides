@@ -95,17 +95,6 @@ Jonsson, 2012  A673 T673 V673
 <slide  >
   
     <hgroup>
-      <h2>Atomistic Medicine</h2>
-      <h3></h3>
-    </hgroup>
-    <article ><p><img width=475 src=figures/tiotropium.png /> <img width=425 src=figures/4daj.png /></p>
-<footer class="source"> Wikipedia; Kobilka, 2012  </footer></article>
- 
-</slide>
-
-<slide  >
-  
-    <hgroup>
       <h2>A crisis at the atomic scale</h2>
       <h3></h3>
     </hgroup>
@@ -122,7 +111,7 @@ http://www.nature.com/scitable/topicpage/what-is-a-cell-14023083
   
     <!-- <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside> -->
     <hgroup class="auto-fadein">
-      <h2>Goal: Predictive, atomic-detail models of protein structure and dynamics (and folding)</h2>
+      <h2>Goal: Predictive, atomic-detail models of protein structure and dynamics</h2>
       <h3></h3>
     </hgroup>
   
@@ -678,7 +667,7 @@ Beauchamp, K. A., Ensign, D. L., Das, R., & Pande, V. S.  PNAS 2011.
     <article ><ul>
 <li>Experimental advances revealed multi-state kinetics in smallest protein system</li>
 <li>MSMs capture multi-state kinetics and recapitulate TTET measurements</li>
-<li>Further work will require improved force fields and better models for experimental observables</li>
+<li>Detailed comparison of simulation and experiment reveals need for better forcefields and observables</li>
 </ul>
 <footer class="source"> 
 Beauchamp, K. A., Ensign, D. L., Das, R., & Pande, V. S.  PNAS 2011.
@@ -721,7 +710,7 @@ http://newh2o.com/2012/11/02/gemstones-elephant-in-the-room-free-project/
 <li><b>Rigorous</b> connection to equilibrium measurements</li>
 </ul>
 <p><center>
-<img height=250 src=figures/hist_0.png />  <img height=250 src=figures/ALA3_rama_amber96_raw.png />  <img height=250 src=figures/bpti_raw.png />
+<img height=250 src=figures/model_hist0.png />  <img height=250 src=figures/ALA3_rama_amber96_raw.png />  <img height=250 src=figures/bpti_raw.png />
 </center></p></article>
  
 </slide>
@@ -808,10 +797,9 @@ Regarded from two sides.  Diet Wiegman, 1984.
       <h3></h3>
     </hgroup>
     <article ><ul>
-<li>Infer conformational ensembles from simulation <b>and</b> experiment</li>
+<li>Infer conformational ensembles from simulation <b>and</b> ambiguous experiments</li>
 <li>Simulataneously model structure and population</li>
 <li>Characterize posterior through MCMC</li>
-<li>Consistent with ambiguous data</li>
 <li>Error bars on equilibrium <b>and</b> structural features</li>
 </ul></article>
  
@@ -839,11 +827,11 @@ Regarded from two sides.  Diet Wiegman, 1984.
     </hgroup>
     <article ><ul>
 <li>Project onto basis of predicted experimental observables</li>
-<li>Reweight populations by a linear free energy: $\pi_j(\alpha) \propto \exp[-\sum_i \alpha_i f_i(x)]$</li>
+<li>Reweight populations by a linear free energy: $\pi_j(\alpha) \propto \exp[-\sum_i \alpha_i f_i(x_j)]$</li>
 <li>$\alpha_i$ tells how populations are perturbed by $i$th experiment</li>
 </ul>
 <p><center>
-<img height=300 src=figures/hist_0.png />
+<img height=300 src=figures/model_hist0.png />
 </center></p></article>
  
 </slide>
@@ -855,12 +843,12 @@ Regarded from two sides.  Diet Wiegman, 1984.
       <h3></h3>
     </hgroup>
     <article ><ul>
-<li>Project onto basis of experimental observables</li>
-<li>Reweight populations by a linear free energy: $\pi_j(\alpha) \propto \exp[-\sum_i \alpha_i f_i(x)]$</li>
+<li>Project onto basis of predicted experimental observables</li>
+<li>Reweight populations by a linear free energy: $\pi_j(\alpha) \propto \exp[-\sum_i \alpha_i f_i(x_j)]$</li>
 <li>$\alpha_i$ tells how populations are perturbed by $i$th experiment</li>
 </ul>
 <p><center>
-<img height=300 src=figures/hist_2.png />
+<img height=300 src=figures/model_hist1.png />
 </center></p></article>
  
 </slide>
@@ -872,12 +860,12 @@ Regarded from two sides.  Diet Wiegman, 1984.
       <h3></h3>
     </hgroup>
     <article ><ul>
-<li>Project onto basis of experimental observables</li>
-<li>Reweight populations by a linear free energy: $\pi_j(\alpha) \propto \exp[-\sum_i \alpha_i f_i(x)]$</li>
+<li>Project onto basis of predicted experimental observables</li>
+<li>Reweight populations by a linear free energy: $\pi_j(\alpha) \propto \exp[-\sum_i \alpha_i f_i(x_j)]$</li>
 <li>$\alpha_i$ tells how populations are perturbed by $i$th experiment</li>
 </ul>
 <p><center>
-<img height=300 src=figures/hist_-2.png />
+<img height=300 src=figures/model_hist-1.png />
 </center></p></article>
  
 </slide>
@@ -889,10 +877,9 @@ Regarded from two sides.  Diet Wiegman, 1984.
       <h3></h3>
     </hgroup>
     <article ><p><center></p>
-<p>Assume independent normal errors:  </p>
-<p>$P(F_i | \alpha) \approx N(\langle f_i(x)\rangle _\alpha, \sigma_i)$</p>
-<p>Determine $\alpha$ by sampling the likelihood:</p>
+<p>Assume independent normal errors.</p>
 <p>$\log P(\alpha| F_1, ..., F_n) = -\sum_i \frac{1}{2}\frac{(\langle f_i(x)\rangle _\alpha - F_i)^2}{\sigma_i^2} + \log P(\alpha)$</p>
+<p>Determine $\alpha$ by sampling the posterior.</p>
 <p></center></p></article>
  
 </slide>
@@ -916,7 +903,7 @@ Regarded from two sides.  Diet Wiegman, 1984.
       <h3></h3>
     </hgroup>
     <article ><ul>
-<li>Model for secondary structure / intrinsic disorder</li>
+<li>Model for secondary structure / disorder peptides</li>
 <li>NMR Data: chemical shifts and scalar couplings</li>
 </ul>
 <p><center>

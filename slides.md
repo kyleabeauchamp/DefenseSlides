@@ -29,13 +29,6 @@ Jonsson, 2012  A673 T673 V673
 </footer>
 
 ---
-title: Atomistic Medicine
-
-<img width=475 src=figures/tiotropium.png /> <img width=425 src=figures/4daj.png />
-
-<footer class="source"> Wikipedia; Kobilka, 2012  </footer>
-
----
 title: A crisis at the atomic scale
 
 <center>
@@ -48,7 +41,7 @@ http://www.nature.com/scitable/topicpage/what-is-a-cell-14023083
 
 
 ---
-title: Goal: Predictive, atomic-detail models of protein structure and dynamics (and folding)
+title: Goal: Predictive, atomic-detail models of protein structure and dynamics
 class: segue dark nobackground
 
 
@@ -447,7 +440,7 @@ title: TTET Conclusions
 
 - Experimental advances revealed multi-state kinetics in smallest protein system
 - MSMs capture multi-state kinetics and recapitulate TTET measurements
-- Further work will require improved force fields and better models for experimental observables
+- Detailed comparison of simulation and experiment reveals need for better forcefields and observables
 
 <footer class="source"> 
 Beauchamp, K. A., Ensign, D. L., Das, R., & Pande, V. S.  PNAS 2011.
@@ -474,7 +467,7 @@ title: Conformational ensembles
 - <b>Rigorous</b> connection to equilibrium measurements
 
 <center>
-<img height=250 src=figures/hist_0.png />  <img height=250 src=figures/ALA3_rama_amber96_raw.png />  <img height=250 src=figures/bpti_raw.png />
+<img height=250 src=figures/model_hist0.png />  <img height=250 src=figures/ALA3_rama_amber96_raw.png />  <img height=250 src=figures/bpti_raw.png />
 </center>
 
 ---
@@ -526,10 +519,9 @@ title: Ambiguous Measurements
 ---
 title: Bayesian Energy Landscape Tilting 
 
-- Infer conformational ensembles from simulation <b>and</b> experiment
+- Infer conformational ensembles from simulation <b>and</b> ambiguous experiments
 - Simulataneously model structure and population
 - Characterize posterior through MCMC
-- Consistent with ambiguous data
 - Error bars on equilibrium <b>and</b> structural features
 
 ---
@@ -543,34 +535,34 @@ title: Ingredients for Ensemble Inference
 title: Biasing and Reweighting
 
 - Project onto basis of predicted experimental observables
-- Reweight populations by a linear free energy: $\pi_j(\alpha) \propto \exp[-\sum_i \alpha_i f_i(x)]$
+- Reweight populations by a linear free energy: $\pi_j(\alpha) \propto \exp[-\sum_i \alpha_i f_i(x_j)]$
 - $\alpha_i$ tells how populations are perturbed by $i$th experiment
 
 
 <center>
-<img height=300 src=figures/hist_0.png />
+<img height=300 src=figures/model_hist0.png />
 </center>
 ---
 title: Biasing and Reweighting
 
-- Project onto basis of experimental observables
-- Reweight populations by a linear free energy: $\pi_j(\alpha) \propto \exp[-\sum_i \alpha_i f_i(x)]$
+- Project onto basis of predicted experimental observables
+- Reweight populations by a linear free energy: $\pi_j(\alpha) \propto \exp[-\sum_i \alpha_i f_i(x_j)]$
 - $\alpha_i$ tells how populations are perturbed by $i$th experiment
 
 
 <center>
-<img height=300 src=figures/hist_2.png />
+<img height=300 src=figures/model_hist1.png />
 </center>
 ---
 title: Biasing and Reweighting
 
-- Project onto basis of experimental observables
-- Reweight populations by a linear free energy: $\pi_j(\alpha) \propto \exp[-\sum_i \alpha_i f_i(x)]$
+- Project onto basis of predicted experimental observables
+- Reweight populations by a linear free energy: $\pi_j(\alpha) \propto \exp[-\sum_i \alpha_i f_i(x_j)]$
 - $\alpha_i$ tells how populations are perturbed by $i$th experiment
 
 
 <center>
-<img height=300 src=figures/hist_-2.png />
+<img height=300 src=figures/model_hist-1.png />
 </center>
 
 ---
@@ -578,13 +570,11 @@ title: A likelihood framework
 
 <center>
 
-Assume independent normal errors:  
-
-$P(F_i | \alpha) \approx N(\langle f_i(x)\rangle _\alpha, \sigma_i)$
-
-Determine $\alpha$ by sampling the likelihood:
+Assume independent normal errors.
 
 $\log P(\alpha| F_1, ..., F_n) = -\sum_i \frac{1}{2}\frac{(\langle f_i(x)\rangle _\alpha - F_i)^2}{\sigma_i^2} + \log P(\alpha)$
+
+Determine $\alpha$ by sampling the posterior.
 
 </center>
 
@@ -600,7 +590,7 @@ subtitle: An Open-Source Python Library for Ensemble Modeling
 ---
 title: Trialanine
 
-- Model for secondary structure / intrinsic disorder
+- Model for secondary structure / disorder peptides
 - NMR Data: chemical shifts and scalar couplings
 
 <center>
