@@ -524,6 +524,9 @@ title: Bayesian Energy Landscape Tilting
 - Characterize posterior through MCMC
 - Error bars on equilibrium <b>and</b> structural features
 
+<footer class="source"> 
+Beauchamp, Das, Pande.  Inferring Structural Ensembles from Noisy Experiments: Application to Trialanine.  In Prep.
+</footer>
 ---
 title: Ingredients for Ensemble Inference
 
@@ -531,6 +534,9 @@ title: Ingredients for Ensemble Inference
 - Equilibrium experimental measurements $F_i$ with uncertainties $\sigma_i$
 - Predicted experimental observables: $f_i(x)$
 
+<footer class="source"> 
+Beauchamp, Das, Pande.  Inferring Structural Ensembles from Noisy Experiments: Application to Trialanine.  In Prep.
+</footer>
 ---
 title: Biasing and Reweighting
 
@@ -542,6 +548,7 @@ title: Biasing and Reweighting
 <center>
 <img height=300 src=figures/model_hist0.png />
 </center>
+
 ---
 title: Biasing and Reweighting
 
@@ -553,6 +560,7 @@ title: Biasing and Reweighting
 <center>
 <img height=300 src=figures/model_hist1.png />
 </center>
+
 ---
 title: Biasing and Reweighting
 
@@ -578,7 +586,9 @@ Determine $\alpha$ by sampling the posterior.
 
 </center>
 
-
+<footer class="source"> 
+Beauchamp, Das, Pande.  Inferring Structural Ensembles from Noisy Experiments: Application to Trialanine.  In Prep.
+</footer>
 ---
 title: FitEnsemble
 subtitle: An Open-Source Python Library for Ensemble Modeling
@@ -683,7 +693,15 @@ title: Simulation Favors Non-Native State
 <img height=500 src=figures/bpti_chi14_raw.png />
 </center>
 
-<footer class="source"> Crystal Structure shown as X  </footer>
+<footer class="source"> 
+
+Crystal Structure shown as X
+
+<br>
+Beauchamp, Cochran, Pande, Das.  In Prep.
+
+</footer>
+
 
 ---
 title: BELT model Favors Native State
@@ -693,7 +711,15 @@ title: BELT model Favors Native State
 </center>
 
 
-<footer class="source"> Crystal Structure shown as X  </footer>
+<footer class="source"> 
+
+Crystal Structure shown as X
+
+<br>
+Beauchamp, Cochran, Pande, Das.  In Prep.
+
+</footer>
+
 ---
 title: Models for BPTI
 
