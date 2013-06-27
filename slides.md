@@ -85,7 +85,7 @@ Eaton, 2006
 title: Outline
 
 - Inferring Protein Dynamics from Molecular Simulation
-- Quantitative Comparison of villin headpiece simulations and Triple-Triplet Energy Transfer Experiments
+- Quantitative Comparison of Villin Headpiece Simulations and Triple-Triplet Energy Transfer Experiments
 - Inferring Conformational Ensembles from Noisy Experiments
 
 <center>
@@ -280,7 +280,7 @@ Beauchamp, K. A., McGibbon, R., Lin, Y. S., & Pande, V. S. (2012). Simple few-st
 </footer>
 
 ---
-title: Quantitative Comparison of villin headpiece simulations and Triple-Triplet Energy Transfer Experiments
+title: Quantitative Comparison of Villin Headpiece Simulations and Triple-Triplet Energy Transfer Experiments
 class: segue dark nobackground
 
 ---
@@ -299,30 +299,16 @@ title: Triplet Triplet Energy Transfer
 - Like FRET, but sensitive at the Å scale 
 - Used to monitor rates of contact formation
 
----
-title: Triplet Triplet Energy Transfer
-
 <center>
-<img height=500 src=figures/Structure-23-35.png />
+<img height=225 src=figures/contact_formation.jpg />
 </center>
 
 <footer class="source">
-Kiefhaber, 2010.
+Lapidus, 2000
 </footer>
 
 ---
-title: Triplet Triplet Energy Transfer
 
-<center>
-<img height=500 src=figures/Structure-1-35-star.png />
-</center>
-
-
-<footer class="source">
-Kiefhaber, 2010.
-</footer>
-
----
 title: Triplet Triplet Energy Transfer
 
 <center>
