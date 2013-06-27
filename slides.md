@@ -22,8 +22,6 @@ title: The Atomistic Basis of Disease
 
 <img width=300 src=figures/alanine.png />  <img width=300 src=figures/threonine.png />   <img width=300 src=figures/valine.png />
 
-<img width=300 src=figures/sick.png />  <img width=300 src=figures/healthy.png />   <img width=300 src=figures/sicker.png />
-
 <footer class="source"> 
 Jonsson, 2012  A673 T673 V673
 </footer>
@@ -32,7 +30,7 @@ Jonsson, 2012  A673 T673 V673
 title: A crisis at the atomic scale
 
 <center>
-<img width=700 src=figures/length_scales_kyle.jpg />
+<img width=700 src=figures/length_scales_kyle.png />
 </center>
 
 <footer class="source"> 
@@ -262,7 +260,7 @@ title: Progress in MSM Construction
 subtitle: Algorithms for Accurate MSMs
 
 <center>
-<img height=300 src=figures/KCentersCentrality.png />  <img height=300 src=figures/HybridCentrality.png />  <img height=300 src=figures/TwoState-Pops.png />
+<img height=350 src=figures/KCentersCentrality.png />  <img height=350 src=figures/HybridCentrality.png />
 </center>
 
 <footer class="source">
@@ -541,7 +539,7 @@ Beauchamp, Das, Pande.  Inferring Structural Ensembles from Noisy Experiments: A
 title: Biasing and Reweighting
 
 - Project onto basis of predicted experimental observables
-- Reweight populations by a linear free energy: $\pi_j(\alpha) \propto \exp[-\sum_i \alpha_i f_i(x_j)]$
+- Reweight using a linear free energy: $-\sum_i \alpha_i f_i(x_j)$
 - $\alpha_i$ tells how populations are perturbed by $i$th experiment
 
 
@@ -553,7 +551,7 @@ title: Biasing and Reweighting
 title: Biasing and Reweighting
 
 - Project onto basis of predicted experimental observables
-- Reweight populations by a linear free energy: $\pi_j(\alpha) \propto \exp[-\sum_i \alpha_i f_i(x_j)]$
+- Reweight using a linear free energy: $-\sum_i \alpha_i f_i(x_j)$
 - $\alpha_i$ tells how populations are perturbed by $i$th experiment
 
 
@@ -565,7 +563,7 @@ title: Biasing and Reweighting
 title: Biasing and Reweighting
 
 - Project onto basis of predicted experimental observables
-- Reweight populations by a linear free energy: $\pi_j(\alpha) \propto \exp[-\sum_i \alpha_i f_i(x_j)]$
+- Reweight using a linear free energy: $-\sum_i \alpha_i f_i(x_j)$
 - $\alpha_i$ tells how populations are perturbed by $i$th experiment
 
 
@@ -574,13 +572,13 @@ title: Biasing and Reweighting
 </center>
 
 ---
-title: A likelihood framework
+title: A Bayesian Framework
 
 <center>
 
-Assume independent normal errors.
+Assume independent normal errors. 
 
-$\log P(\alpha| F_1, ..., F_n) = -\sum_i \frac{1}{2}\frac{(\langle f_i(x)\rangle _\alpha - F_i)^2}{\sigma_i^2} + \log P(\alpha)$
+$\underbrace{\log P(\alpha| F_1, ..., F_n)}_{Posterior}$ = $\underbrace{-\sum_i \frac{1}{2}\frac{(\langle f_i(x)\rangle_α - F_i)^2}{\sigma_i^2}} _ {Likelihood (\chi^2)} + \underbrace{\log P(\alpha)} _ {Prior}$
 
 Determine $\alpha$ by sampling the posterior.
 
@@ -759,7 +757,43 @@ title: Conclusion
 ---
 title: Acknowledgements
 
+<center>
+
 Rhiju and Vijay
+
+</center>
+
+<img height=325 src=https://lh5.googleusercontent.com/-1yMjSz9dHPA/T9pe6l08uaI/AAAAAAAAAAk/O55Qldc6QYY/s1024/image-01.jpeg />
+<img height=325 src=personal_pictures/pandelab.jpg />
+
+
+---
+title: Acknowledgements
+subtitle: Pande Lab
+
+<font size="5">
+
+ Greg Bowman 
+
+ Vince Voelz
+
+ Robert McGibbon
+
+ Christian Schwantes
+
+ TJ Lane
+
+ Imran Haque
+
+ Sergio Bacallado
+
+ Lee-Ping Wang
+
+ Yu-Shan Lin
+ 
+ Everyone!
+ 
+</font>
 
 ---
 title: Acknowledgements
@@ -773,40 +807,9 @@ subtitle: Das Lab
 - Everyone!
 
 ---
+
 title: Acknowledgements
-subtitle: Pande Lab / MSMBuilder
-
-<font size="3">
-
- Greg Bowman
-
- Robert McGibbon
-
- Christian Schwantes
-
- TJ Lane
-
- Imran Haque
-
- Sergio Bacallado
-
- Lutz Maibaum
-
- Lee-Ping Wang
-
- Yu-Shan Lin
-
- Vince Voelz
-
- Dan Ensign
- 
- Everyone!
- 
-</font>
-
----
-title: Acknowledgements
-subtitle: Biochemistry 
+subtitle: Biochemistry / Biophysics
 
 Buzz Baldwin
 
@@ -816,7 +819,9 @@ Pehr Harbury
 
 Xuesong Shi
 
-Administrative Staff
+Laura Wang, Jessica Metzger, and all the Biochem staff
+
+Kathleen Guan
 
 Everyone!
 
@@ -830,15 +835,12 @@ Russ Altman
 
 ---
 title: Acknowledgements
-subtitle: Folding@Home, Simbios, External
 
 Folding@Home Donors and Forum Volunteers (Bruce Borden)
 
 OpenMM Team: Joy Ku, Peter Eastman, Mark Friedrichs, Yutong Zhao
 
-TTET: Thomas Kiefhaber
-
-BELT: John Chodera, Frank Cochran, TJ Lane
+Thomas Kiefhaber, John Chodera, Frank Noe, Jesus Izaguirre
 
 DE Shaw Research
 
@@ -847,5 +849,31 @@ Susan Marqusee, Laura Rosen
 ---
 title: Personal Acknowledgements
 
+<img height=250 src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-prn1/150375_1638963646521_6696492_n.jpg" />
+<img height=250 src="https://sphotos-b.xx.fbcdn.net/hphotos-ash3/486863_437987026246966_1599482437_n.jpg" />
+<img height=250 src="https://sphotos-b.xx.fbcdn.net/hphotos-frc3/737674_10100468804653513_106553532_o.jpg" />
+<img height=250 src="https://sphotos-a.xx.fbcdn.net/hphotos-prn1/24510_634596556298_7990982_n.jpg" />
+<img height=250 src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash4/2661_525035797127_1171389_n.jpg" />
 
 
+---
+title: A Model for TTET
+
+<center>
+<img height=500 src=figures/hp35-spheres.png />
+</center>
+
+---
+title: A Model for TTET
+
+<center>
+<img height=400 src=figures/ConformationalMSM.png /> <img height=420 src=figures/ElectronicMSM-full.png />
+</center>
+
+---
+title: A Model for TTET
+
+$$P(i\rightarrow j, dark \rightarrow dark) = P_0(i\rightarrow j)$$
+$$P(i\rightarrow j, dark \rightarrow light) = P_0(i\rightarrow j)$$
+$$P(i\rightarrow j, light \rightarrow light) = (1 - f_i) P_0(i\rightarrow j)$$
+$$P(i\rightarrow j, light \rightarrow dark) = \delta_{ij} f_i$$
