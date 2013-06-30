@@ -222,7 +222,7 @@ $T = \begin{pmatrix} T_{1\rightarrow 1} & T_{1\rightarrow 2} \\\ T_{2 \rightarro
 
 ---
 title: MSMBuilder
-subtitle: An Open-Source, High Performance, Python toolkit for MSM Construction
+subtitle: An Open-Source, High-Performance, Python toolkit for MSM Construction
 
 <img height=400 src=figures/msmbuilder.png />  <img height=400 src=figures/msmb_users.png />
 
@@ -666,9 +666,6 @@ title: Are BPTI Simulations Consistent with Experiment?
 </center>
 
 <footer class="source"> Shaw, 2010  </footer>
----
-title: Idea: Use chemical shifts to reweight BPTI simulation.
-
 
 ---
 title: Simulation Favors Non-Native State
@@ -686,8 +683,11 @@ Beauchamp, Cochran, Pande, Das.  In Prep.
 
 </footer>
 
+---
+title: Idea: Use chemical shifts to reweight BPTI simulation.
 
 ---
+
 title: BELT model Favors Native State
 
 <center>
@@ -770,12 +770,6 @@ subtitle: Pande Lab
  TJ Lane
 
  Imran Haque
-
- Sergio Bacallado
-
- Lee-Ping Wang
-
- Yu-Shan Lin
  
  Everyone!
  
@@ -789,7 +783,6 @@ subtitle: Das Lab
 - Frank Cochran
 - Fang-Chieh Chou
 - Parin Sripakdeevong
-- Ann Kladwang
 - Everyone!
 
 ---
@@ -805,7 +798,7 @@ Pehr Harbury
 
 Xuesong Shi
 
-Laura Wang, Jessica Metzger, and all the Biochem staff
+Laura Wang, Jessica Metzger, Aimee Garza, Crystal Spitale and all the Biochem staff
 
 Kathleen Guan
 
@@ -816,6 +809,8 @@ title: Acknowledgements
 subtitle: Committee 
 
 Todd Martinez
+
+Pehr
 
 Russ Altman
 
@@ -841,6 +836,11 @@ title: Personal Acknowledgements
 <img height=250 src="https://sphotos-a.xx.fbcdn.net/hphotos-prn1/24510_634596556298_7990982_n.jpg" />
 <img height=250 src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash4/2661_525035797127_1171389_n.jpg" />
 
+---
+title: Thanks!
+class: segue dark nobackground
+
+
 
 ---
 title: A Model for TTET
@@ -863,3 +863,5 @@ $$P(i\rightarrow j, dark \rightarrow dark) = P_0(i\rightarrow j)$$
 $$P(i\rightarrow j, dark \rightarrow light) = P_0(i\rightarrow j)$$
 $$P(i\rightarrow j, light \rightarrow light) = (1 - f_i) P_0(i\rightarrow j)$$
 $$P(i\rightarrow j, light \rightarrow dark) = \delta_{ij} f_i$$
+
+---
