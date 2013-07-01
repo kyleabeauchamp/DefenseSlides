@@ -558,7 +558,7 @@ title: A Bayesian Framework
 
 Assume independent normal errors. 
 
-$\underbrace{\log P(\alpha| F_1, ..., F_n)}_{Posterior}$ = $\underbrace{-\sum_i \frac{1}{2}\frac{(\langle f_i(x)\rangle_α - F_i)^2}{\sigma_i^2}} _ {Likelihood (\chi^2)} + \underbrace{\log P(\alpha)} _ {Prior}$
+$\underbrace{\log P(\alpha| F_1, ..., F_n)}_{Log \_\ Posterior}$ = $\underbrace{-\sum_i \frac{1}{2}\frac{(\langle f_i(x)\rangle_α - F_i)^2}{\sigma_i^2}} _ {Log \_\ Likelihood (\chi^2)} + \underbrace{\log P(\alpha)} _ {Log \_\ Prior}$
 
 Determine $\alpha$ by sampling the posterior.
 
@@ -725,6 +725,7 @@ title: Conclusions and Future Work (BELT)
 - BELT corrects forcefield bias in trialanine and BPTI
 - Measure <b>all</b> scalar couplings for BPTI
 - Better predictors of experimental observables: chemical shifts, scalar couplings, (TTET)
+- Can we change the way NMR data is collected and analyzed?
 
 ---
 title: Conclusion
@@ -824,8 +825,10 @@ Susan Marqusee, Laura Rosen
 ---
 title: Personal Acknowledgements
 
-<img height=250 src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-prn1/150375_1638963646521_6696492_n.jpg" />
-<img height=250 src="https://sphotos-b.xx.fbcdn.net/hphotos-ash3/486863_437987026246966_1599482437_n.jpg" />
+<img height=225 src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-prn1/150375_1638963646521_6696492_n.jpg" />
+<img height=225 src="https://sphotos-b.xx.fbcdn.net/hphotos-ash3/486863_437987026246966_1599482437_n.jpg" />
+<img height=175 src=personal_pictures/Terry.jpg />
+
 <img height=250 src="https://sphotos-b.xx.fbcdn.net/hphotos-frc3/737674_10100468804653513_106553532_o.jpg" />
 <img height=250 src="https://sphotos-a.xx.fbcdn.net/hphotos-prn1/24510_634596556298_7990982_n.jpg" />
 <img height=250 src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash4/2661_525035797127_1171389_n.jpg" />
@@ -868,3 +871,37 @@ title: Conformational ensembles
 <center>
 <img height=250 src=figures/model_hist0.png />  <img height=250 src=figures/ALA3_rama_amber96_raw.png />  <img height=250 src=figures/bpti_raw.png />
 </center>
+
+
+---
+title: Bayesian Energy Landscape Tilting (BELT)
+
+Linear virtual biasing potential (LVBP): $\Delta U(x;\alpha) = \sum_i \alpha_i f_i(x)$
+
+$\alpha_i$ tells how the energy of structure $x$ is changed by the predicted observable $f_i(x)$.
+
+Populations by Boltzmann: $\pi_j(\alpha) \propto \exp[-\Delta U(x_j;\alpha)]$
+ 
+
+---
+title: A Bayesian Framework 
+
+The true ensemble is described by some coefficients $\alpha$. 
+ 
+Let $F_i$ be a noisy measurement of the $i$th experiment.
+ 
+Let $\langle  \rangle_\alpha$ denote an equilibrium expectation in the $\alpha$ ensemble.
+ 
+$$P(F_i | \alpha) \approx N(\langle f_i(x)\rangle _\alpha, \sigma_i)$$
+ 
+ 
+---
+title: A Bayesian Framework
+
+$$P(\alpha | F_1, ..., F_n) \propto P(F_1, ..., F_n | \alpha) P(\alpha)$$
+
+$$\log P(\alpha| F_1, ..., F_n) = -\sum_j \frac{1}{2}\frac{(\langle f_j(x)\rangle _\alpha - F_j)^2}{\sigma_i^2} + \log P(\alpha)$$
+  
+MaxEnt prior: $\log P(\alpha) = \lambda \sum_i \pi_i(\alpha) \log \pi_i(\alpha)$
+ 
+Use MCMC (pymc) to sample the likelihood function. 
