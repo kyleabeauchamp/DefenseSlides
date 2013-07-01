@@ -136,7 +136,7 @@ title: Markov State Models
 
 - Run many parallel simulations on commodity hardware
 - Build kinetic network model of dynamics
-- Quantitively predict structure, equilibrium, and kinetics
+- Quantitatively predict structure, equilibrium, and kinetics
 
 <img height=250 src=figures/hp35_box.png /> <img height=250 src=figures/NTL9_network.jpg />   <img height=250 src=figures/HP35_relaxation.png />
 
@@ -493,7 +493,7 @@ title: Ambiguous Measurements
 title: Bayesian Energy Landscape Tilting 
 
 - Infer conformational ensembles from simulation <b>and</b> ambiguous experiments
-- Simulataneously model structure and population
+- Simultaneously model structure and population
 - Characterize posterior through MCMC
 - Error bars on equilibrium <b>and</b> structural features
 
