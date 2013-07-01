@@ -444,17 +444,6 @@ http://newh2o.com/2012/11/02/gemstones-elephant-in-the-room-free-project/
 </footer>
 
 ---
-title: Conformational ensembles
-
-- Structure + Equilibrium (not kinetics)
-- Characterize the population of <b>every</b> conformation
-- <b>Rigorous</b> connection to equilibrium measurements
-
-<center>
-<img height=250 src=figures/model_hist0.png />  <img height=250 src=figures/ALA3_rama_amber96_raw.png />  <img height=250 src=figures/bpti_raw.png />
-</center>
-
----
 title: Experiments as Projections
 
 <center>
@@ -507,6 +496,11 @@ title: Bayesian Energy Landscape Tilting
 - Simulataneously model structure and population
 - Characterize posterior through MCMC
 - Error bars on equilibrium <b>and</b> structural features
+
+<center>
+<img height=200 src=figures/model_hist0.png />  <img height=200 src=figures/ALA3_rama_amber96_raw.png />  <img height=200 src=figures/bpti_raw.png />
+</center>
+
 
 <footer class="source"> 
 Beauchamp, Das, Pande.  Inferring Structural Ensembles from Noisy Experiments: Application to Trialanine.  In Prep.
@@ -865,3 +859,12 @@ $$P(i\rightarrow j, light \rightarrow light) = (1 - f_i) P_0(i\rightarrow j)$$
 $$P(i\rightarrow j, light \rightarrow dark) = \delta_{ij} f_i$$
 
 ---
+title: Conformational ensembles
+
+- Structure + Equilibrium (not kinetics)
+- Characterize the population of <b>every</b> conformation
+- <b>Rigorous</b> connection to equilibrium measurements
+
+<center>
+<img height=250 src=figures/model_hist0.png />  <img height=250 src=figures/ALA3_rama_amber96_raw.png />  <img height=250 src=figures/bpti_raw.png />
+</center>
