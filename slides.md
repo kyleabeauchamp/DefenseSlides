@@ -744,9 +744,6 @@ Rhiju and Vijay
 
 </center>
 
-<img height=325 src=https://lh5.googleusercontent.com/-1yMjSz9dHPA/T9pe6l08uaI/AAAAAAAAAAk/O55Qldc6QYY/s1024/image-01.jpeg />
-<img height=325 src=personal_pictures/pandelab.jpg />
-
 
 ---
 title: Acknowledgements
