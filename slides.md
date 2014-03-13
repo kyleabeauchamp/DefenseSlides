@@ -823,17 +823,6 @@ DE Shaw Research
 Susan Marqusee, Laura Rosen
 
 ---
-title: Personal Acknowledgements
-
-<img height=225 src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-prn1/150375_1638963646521_6696492_n.jpg" />
-<img height=225 src="https://sphotos-b.xx.fbcdn.net/hphotos-ash3/486863_437987026246966_1599482437_n.jpg" />
-<img height=175 src=personal_pictures/Terry.jpg />
-
-<img height=250 src="https://sphotos-b.xx.fbcdn.net/hphotos-frc3/737674_10100468804653513_106553532_o.jpg" />
-<img height=250 src="https://sphotos-a.xx.fbcdn.net/hphotos-prn1/24510_634596556298_7990982_n.jpg" />
-<img height=250 src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash4/2661_525035797127_1171389_n.jpg" />
-
----
 title: Thanks!
 class: segue dark nobackground
 
